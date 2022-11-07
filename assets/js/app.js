@@ -1,5 +1,5 @@
 class App {
     makan (){
-        console.log('ok');
+       return console.log('ok');
     }
 }
