@@ -1,4 +1,4 @@
-import { App } from "./assets/js/app.js";
+import { App } from "/assets/js/app.js";
 
 let a = new App();
-console.log(a);
+console.log(a.makan);
