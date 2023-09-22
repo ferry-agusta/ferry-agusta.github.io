@@ -1,4 +1,5 @@
 import { App } from "/assets/js/app.js";
 
-let a = new App();
-console.log(a.makan);
+function test (){
+    console.log('ini adala sebuah test');
+}
