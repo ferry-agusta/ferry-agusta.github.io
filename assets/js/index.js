@@ -1,7 +1,6 @@
-import { App } from "/assets/js/app.js";
 
 function test (){
-    return 'ini adala sebuah test';
+    return 'ini adalah sebuah test';
 }
 
 console.log(test());
