@@ -8,7 +8,7 @@ img {
 }
 
 body {
-  background-color: #ddd;
+  background-color: #f5f5f5;
   font-size: 18px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   margin: 2px;
@@ -26,7 +26,7 @@ body {
   grid-template-areas:
     'hero hero feature-1'
     'hero hero feature-2';
-  gap: 2px;
+  gap: 3px;
 }
 
 .hero {
@@ -129,7 +129,7 @@ body {
   background-color: white;
   padding: 3px;
   text-align: center;
-  border: 1px solid #aaa;
+  border: 1px solid rgb(223,223,223);
 }
 
 .brand p {
@@ -162,15 +162,15 @@ body {
 /* Goods */
 .goods {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 5px;
 }
 
 .good {
-  background-color: white;
+  background-color: #fff;
   padding: 3px;
   text-align: center;
-
+  border: 1px solid rgb(223,223,223);
 }
 
 .good a {
@@ -194,7 +194,7 @@ body {
 }
 
 .link {
-  background-color: #aaa;
+  background-color: rgb(223,223,223);
   color: #aaa;
   place-content: center;
 }
@@ -219,13 +219,14 @@ body {
 
 .short {
   background-color: white;
+  border: 1px solid rgb(223,223,223);
   padding: 3px;
   text-align: center;
 }
 
 .short a {
   text-decoration: none;
-  color: #aaa;
+
 }
 
 .short p {
