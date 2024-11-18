@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #ddd;
+  font-size: 18px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  margin: 2px;
+}
+
+/* Container */
+.container {
+  display: grid;
+  gap: 2px;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-areas:
+    'hero hero feature-1'
+    'hero hero feature-2';
+  gap: 2px;
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 300px;
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-left: 20px;
+}
+
+.hero>* {
+  display: none;
+}
+
+.features {
+  color: #333;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.feature-1 {
+  grid-area: feature-1;
+  background-image: url(img/feature-1.png);
+  background-size: cover;
+}
+
+.feature-2 {
+  grid-area: feature-2;
+  background-image: url(img/feature-2.png);
+  background-size: cover;
+}
+
+.features .price {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+
+/* Navigation */
+.menu {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
+  background-image: url(img/title-section.png);
+  background-size: cover;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.menu .logo {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.logo h1 {
+  background: linear-gradient(90deg, khaki 40%, black 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 7px;
+}
+
+.menu a {
+  display: block;
+  background-color: red;
+  border: 2px solid maroon;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 2px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  border-radius: 50%;
+}
+
+.menu a:hover {
+  background-color: maroon;
+  transition: 400ms;
+}
+
+
+/* Brands */
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 5px;
+}
+
+.brand {
+  background-color: white;
+  padding: 3px;
+  text-align: center;
+  border: 1px solid #aaa;
+}
+
+.brand p {
+  font-size: 0.6em;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #333;
+}
+
+.brand:hover {
+  border: 2px solid #aaa;
+}
+
+.title-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url(img/title-section.png);
+  background-size: cover;
+  color: #333;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+/* Goods */
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.good {
+  background-color: white;
+  padding: 3px;
+  text-align: center;
+
+}
+
+.good a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.good p {
+  font-size: 0.7em;
+  color: rgb(255, 25, 2)
+}
+
+.good h4 {
+  font-size: 0.7em;
+  font-weight: 200;
+  color: #333;
+}
+
+.good:hover {
+  border: 2px solid #aaa;
+}
+
+.link {
+  background-color: #aaa;
+  color: #aaa;
+  place-content: center;
+}
+
+.link img {
+  width: 100px;
+}
+
+.link h4 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #333;
+}
+
+
+/* Short */
+.shorts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+}
+
+.short {
+  background-color: white;
+  padding: 3px;
+  text-align: center;
+}
+
+.short a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.short p {
+  font-size: 0.7em;
+  color: rgb(255, 25, 2)
+}
+
+.short h4 {
+  font-size: 0.7em;
+  font-weight: 200;
+  color: #333;
+}
+
+.short:hover {
+  border: 2px solid #aaa;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+
+  .hero>* {
+    display: block;
+    background-color: rgb(255, 25, 2);
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 600px) {
+  .header {
+    grid-template-areas:
+      'hero'
+      'feature-1'
+      'feature-2';
+  }
+}
