@@ -41,7 +41,7 @@ body {
 
 .hero>* {
   display: none;
-  color: #333;
+  color: white;
 }
 
 .features {
@@ -82,19 +82,19 @@ body {
   display: grid;
   grid-template-columns: 2fr 2fr;
   align-items: center;
-  background-image: url(img/title-section.png);
+  background-image: url(img/title-section.png); 
   background-size: cover;
   padding: 10px;
   box-sizing: border-box;
 }
 
 .menu .logo {
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-align: center;
 }
 
 .logo h1 {
-  background: linear-gradient(90deg, khaki 40%, black 50%);
+  background: linear-gradient(90deg, khaki 40%, #333 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -108,12 +108,12 @@ body {
 
 .menu a {
   display: block;
-  background-color: red;
+  background-color: orangered;
   border: 2px solid maroon;
   color: white;
   text-decoration: none;
   text-align: center;
-  padding: 2px;
+  padding: 6px;
   text-transform: uppercase;
   font-size: 0.9em;
   border-radius: 50%;
@@ -121,6 +121,7 @@ body {
 
 .menu a:hover {
   background-color: maroon;
+  border: 2px solid maroon;
 }
 
 
@@ -165,6 +166,7 @@ body {
   border-radius: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding: 15px;
 }
 
 /* Goods */
@@ -177,7 +179,7 @@ body {
 .good {
   border-radius: 5px;
   background-color: #fff;
-  padding: 5px;
+  padding: 5px 5px 10px 5px;
   text-align: center;
   border: 1px solid rgb(223, 223, 223);
 }
@@ -188,13 +190,13 @@ body {
 }
 
 .good p {
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: rgb(255, 25, 2)
 }
 
 .good h4 {
   font-size: 0.7em;
-  font-weight: 200;
+  font-weight: 400;
   color: #333;
 }
 
@@ -230,29 +232,30 @@ body {
   border-radius: 5px;
   background-color: white;
   border: 1px solid rgb(223, 223, 223);
-  padding: 3px;
   text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 15px;
 }
 
 .short a {
   text-decoration: none;
-
 }
 
 .short p {
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: rgb(255, 25, 2)
 }
 
 .short h4 {
   font-size: 0.7em;
-  font-weight: 200;
+  font-weight: 400;
   color: #333;
 }
 
-.short:hover {
-  border: 2px solid #aaa;
+.short iframe {
+  min-height: 480px;
 }
+
 
 /* Responsive Breakpoint */
 @media (max-width: 1024px) {
@@ -262,7 +265,7 @@ body {
 
   .hero>* {
     display: block;
-    background-color: rgb(255, 25, 2);
+    background-color: orangered;
     padding: 5px;
     margin-bottom: 10px;
   }
