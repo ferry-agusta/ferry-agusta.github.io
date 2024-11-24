@@ -176,6 +176,7 @@ body {
   gap: 7px;
 }
 
+
 .good {
   border-radius: 0 0 5px 5px;
   background-color: #fff;
@@ -306,7 +307,7 @@ body {
   /* Desktop */
   .desktop {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     background-color: orangered;
     position: fixed;
     bottom: 0;
@@ -321,3 +322,4 @@ body {
     border-radius: 50%;
     background-color: #fff;
   }
+}
