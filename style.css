@@ -11,6 +11,9 @@ body {
   background-color: #f5f5f5;
   font-size: 18px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
+  /* font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif; */
+  /* font-family: "Nunito Sans", Arial, Helvetica, sans-serif; */
+  /* font-family: "Roboto Flex", Arial, Helvetica, sans-serif; */
   margin: 2px;
 }
 
@@ -82,7 +85,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 2fr;
   align-items: center;
-  background-image: url(img/title-section.png); 
+  background-image: url(img/title-section.png);
   background-size: cover;
   padding: 10px;
   box-sizing: border-box;
@@ -136,7 +139,7 @@ body {
   background-color: white;
   padding: 3px;
   text-align: center;
-  border: 1px solid rgb(223, 223, 223);
+  /* border: 1px solid rgb(223, 223, 223); */
 }
 
 .brand p {
@@ -149,38 +152,36 @@ body {
 }
 
 .brand:hover {
-  border: 2px solid #aaa;
+  border: 1px solid #aaa;
 }
 
+/* Title */
 .title-section {
   display: grid;
   grid-template-columns: 1fr;
-  background-image: url(img/title-section.png);
-  background-size: cover;
-  color: #333;
+  color: rgb(205, 1, 25);
   text-align: center;
   padding: 5px;
+  font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 1.6em;
-  font-weight: 400;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 15px;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 /* Goods */
 .goods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 5px;
+  gap: 7px;
 }
 
 .good {
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   background-color: #fff;
   text-align: center;
-  border: 1px solid rgb(223, 223, 223);
+  /* border: 1px solid rgb(223, 223, 223); */
   padding-bottom: 10px;
 }
 
@@ -189,24 +190,23 @@ body {
   color: #aaa;
 }
 
-.good p {
-  font-size: 0.8em;
-  color: rgb(255, 25, 2)
+.good h4 {
+  font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(95, 100, 105);
+  text-transform: uppercase;
 }
 
-.good h4 {
-  font-size: 0.7em;
-  font-weight: 400;
-  color: #333;
+.good p {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: rgb(235, 75, 45)
 }
 
 .good:hover {
-  border: 2px solid #aaa;
-}
-
-.good img {
-  border-radius: 3px 3px 0 0;
-
+  border: 1px solid #aaa;
+  border-radius: 0 0 5px 5px;
 }
 
 .link {
@@ -230,16 +230,17 @@ body {
 .shorts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 5px;
+  gap: 7px;
 }
 
 .short {
   background-color: white;
-  border: 1px solid rgb(223, 223, 223);
+  /* border: 1px solid rgb(223, 223, 223); */
   text-align: center;
   box-sizing: border-box;
   padding-top: 5px;
   padding-bottom: 15px;
+  border-radius: 0 0 5px 5px;
 }
 
 .short a {
@@ -248,7 +249,7 @@ body {
 
 .short p {
   font-size: 0.8em;
-  color: rgb(255, 25, 2)
+  color: rgb(235, 75, 45)
 }
 
 .short h4 {
@@ -261,6 +262,14 @@ body {
   min-height: 480px;
 }
 
+.short:hover {
+  border: 1px solid #aaa;
+  border-radius: 0 0 5px 5px;
+}
+
+.desktop {
+  display: none;
+}
 
 /* Responsive Breakpoint */
 @media (max-width: 1024px) {
@@ -270,8 +279,8 @@ body {
 
   .hero>* {
     display: block;
-    background-color: orangered;
-    padding: 5px;
+    background-color: rgb(205, 1, 25);
+    padding: 5px 13px;
     margin-bottom: 10px;
   }
 
@@ -292,4 +301,53 @@ body {
       'feature-1'
       'feature-2';
   }
+
+  /* Desktop */
+  .desktop {
+    display: grid;
+    grid-template-areas: 'left-1 left-2 mid right-1 right-2';
+    align-items: center;
+    gap: 5px;
+    background-color: orangered;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12%;
+    border-radius: 5px 5px 0 0;
+    box-sizing: border-box;
+    justify-content: space-around;
+
+  }
+
+  .icon {
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    line-height: 50px;
+  }
+
+  .left-1 {
+    grid-area: left-1;
+  }
+
+  .left-2 {
+    grid-area: left-2;
+  }
+
+  .mid {
+    grid-area: mid;
+
+  }
+
+  .right-1 {
+    grid-area: right-1;
+  }
+
+  .right-1 {
+    grid-area: right-2;
+  }
+
 }
