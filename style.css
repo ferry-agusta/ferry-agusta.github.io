@@ -14,14 +14,74 @@ body {
   /* font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif; */
   /* font-family: "Nunito Sans", Arial, Helvetica, sans-serif; */
   /* font-family: "Roboto Flex", Arial, Helvetica, sans-serif; */
+  /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
+  /* font-family: "Pacifico", cursive; */
   margin: 2px;
 }
+
 
 /* Container */
 .container {
   display: grid;
-  gap: 1px;
+  /* gap: 1px; */
 }
+
+
+/* Navigation */
+.menu {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
+  /* background-image: url(img/title-section.png);
+  background-size: cover; */
+  background-color: rgb(205, 1, 25);
+  box-sizing: border-box;
+}
+
+.menu .logo {
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.logo h1 {
+  font-family: "Pacifico", cursive;
+}
+
+.logo .h {
+  color: yellow;
+}
+
+.logo .s {
+  color: #333;
+  text-shadow: 1px 1px 3px white;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  background-color: orangered;
+  border: 2px solid maroon;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.menu a:hover {
+  background-color: maroon;
+  border: 2px solid maroon;
+}
+
 
 /* Header */
 .header {
@@ -44,7 +104,15 @@ body {
 
 .hero>* {
   display: none;
-  color: white;
+}
+
+.hero .h {
+  color: yellow;
+}
+
+.hero .s {
+  text-shadow: 1px 1px 3px white;
+  color: #333;
 }
 
 .features {
@@ -53,7 +121,6 @@ body {
   place-content: center;
   text-align: center;
   cursor: pointer;
-
 }
 
 .feature-1 {
@@ -78,53 +145,6 @@ body {
 .features .item {
   font-size: 1.5em;
   font-weight: 400;
-}
-
-/* Navigation */
-.menu {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  align-items: center;
-  background-image: url(img/title-section.png);
-  background-size: cover;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.menu .logo {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.logo h1 {
-  background: linear-gradient(90deg, khaki 40%, #333 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.menu ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 7px;
-}
-
-.menu a {
-  display: block;
-  background-color: orangered;
-  border: 2px solid maroon;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  padding: 6px;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  border-radius: 50%;
-}
-
-.menu a:hover {
-  background-color: maroon;
-  border: 2px solid maroon;
 }
 
 
@@ -169,13 +189,13 @@ body {
   padding-bottom: 10px;
 }
 
+
 /* Goods */
 .goods {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 7px;
 }
-
 
 .good {
   border-radius: 0 0 5px 5px;
@@ -190,11 +210,13 @@ body {
 }
 
 .good h4 {
-  font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif;
+  /* font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif; */
+
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: 600;
+  font-weight: 500;
   color: rgb(95, 100, 105);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .good p {
@@ -273,6 +295,7 @@ body {
   display: none;
 }
 
+
 /* Responsive Breakpoint */
 @media (max-width: 1024px) {
   .menu {
@@ -281,9 +304,22 @@ body {
 
   .hero>* {
     display: block;
-    background-color: rgb(205, 1, 25);
     padding: 5px 13px;
     margin-bottom: 10px;
+  }
+
+  .hero .heading {
+    background-color: rgb(205, 1, 25);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+  }
+
+  .hero .sub-heading {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    color: #333;
+    text-shadow: 3px 3px 10px yellow;
+    font-weight: 800;
+    font-size: 0.7em;
   }
 
   .hero {
@@ -307,24 +343,19 @@ body {
   /* Desktop */
   .desktop {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    background-color: orangered;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    background-color: #fff;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     box-sizing: border-box;
-    gap: 5px;
+    padding: 10px 0;
   }
 
-
-
   .icon {
-    border-radius: 50%;
-    background-color: #fff;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
     text-align: center;
+    box-sizing: border-box;
+    color: #333;
   }
 }
