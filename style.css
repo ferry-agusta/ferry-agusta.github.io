@@ -54,7 +54,7 @@ body {
 
 .logo .s {
   color: #333;
-  text-shadow: 1px 1px 3px white;
+  text-shadow: 1px 1px 2px white;
 }
 
 .menu ul {
@@ -111,7 +111,7 @@ body {
 }
 
 .hero .s {
-  text-shadow: 1px 1px 3px white;
+  text-shadow: 1px 1px 2px white;
   color: #333;
 }
 
@@ -317,7 +317,7 @@ body {
   .hero .sub-heading {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     color: #333;
-    text-shadow: 3px 3px 10px white;
+    text-shadow: 1px 1px 2px white;
     font-weight: 800;
     font-size: 0.7em;
   }
@@ -363,4 +363,9 @@ body {
     width: 32px;
     height: 32px;
   }
+
+  .icon p {
+    font-size: 0.6em;
+  }
+
 }
