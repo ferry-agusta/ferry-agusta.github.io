@@ -317,7 +317,7 @@ body {
   .hero .sub-heading {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     color: #333;
-    text-shadow: 3px 3px 10px yellow;
+    text-shadow: 3px 3px 10px white;
     font-weight: 800;
     font-size: 0.7em;
   }
@@ -349,7 +349,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
   }
 
   .icon {
