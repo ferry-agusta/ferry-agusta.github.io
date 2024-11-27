@@ -343,20 +343,24 @@ body {
   /* Desktop */
   .desktop {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     background-color: #fff;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     box-sizing: border-box;
+    padding: 5px 0;
   }
 
   .icon {
     text-align: center;
     box-sizing: border-box;
-    color: #333;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    color: #aaa;
+  }
+
+  .desktop .icon-size {
+    width: 32px;
+    height: 32px;
   }
 }
