@@ -11,16 +11,103 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
 
-
-
 </head>
 
 <body>
 
-  <dialog data-modal class="modal">
+  <dialog data-modal-kategori class="modal">
+    <section class="brands">
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+    </section>
+  </dialog>
+
+  <dialog data-modal-cari class="modal">
     <form>
       <input type="text" placeholder="cari..."><br>
-      <div type="submit" class="icon"><i class="icon-size-32" data-feather="search"></i>
+      <div type="submit" class="icon"><i class="icon-size-32 close-modal-cari" data-feather="search"></i>
       </div>
     </form>
   </dialog>
@@ -308,7 +395,7 @@
     </section>
 
     <nav class="desktop">
-      <div class="icon"><i class="icon-size-30" data-feather="grid"></i>
+      <div class="icon" open-modal-kategori><i class="icon-size-30" data-feather="grid"></i>
         <p>Kategori</p>
       </div>
       <div class="icon"><i class="icon-size-30" data-feather="image"></i>
@@ -317,7 +404,7 @@
       <div class="icon"><i class="icon-size-30" data-feather="youtube"></i>
         <p>Shorts</p>
       </div>
-      <div class="icon" data-open-modal><i class="icon-size-30" data-feather="search"></i>
+      <div class="icon" open-modal-cari><i class="icon-size-30" data-feather="search"></i>
         <p>Cari</p>
       </div>
       <div class="icon"><i class="icon-size-30" data-feather="message-circle"></i>
