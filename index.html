@@ -17,6 +17,14 @@
 
 <body>
 
+  <dialog data-modal class="modal">
+    <form>
+      <input type="text" placeholder="cari..."><br>
+      <div type="submit" class="icon"><i class="icon-size-32" data-feather="search"></i>
+      </div>
+    </form>
+  </dialog>
+
   <div class="container">
     <nav class="menu">
       <div class="logo">
@@ -38,7 +46,6 @@
         <div class="icon"><i class="icon-size-32" data-feather="message-circle"></i>
           <p>WhatsApp</p>
         </div>
-
       </div>
     </nav>
 
@@ -310,7 +317,7 @@
       <div class="icon"><i class="icon-size-30" data-feather="youtube"></i>
         <p>Shorts</p>
       </div>
-      <div class="icon"><i class="icon-size-30" data-feather="search"></i>
+      <div class="icon" data-open-modal><i class="icon-size-30" data-feather="search"></i>
         <p>Cari</p>
       </div>
       <div class="icon"><i class="icon-size-30" data-feather="message-circle"></i>
@@ -318,7 +325,6 @@
       </div>
     </nav>
   </div>
-
 
   <script src="script.js"></script>
 </body>

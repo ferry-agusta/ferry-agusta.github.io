@@ -171,7 +171,6 @@ body {
   font-size: 0.7em;
   font-weight: 700;
   color: rgb(235, 75, 45);
-  /* color: rgb(205, 1, 25); */
 }
 
 .good:hover {
@@ -222,14 +221,15 @@ body {
 .short h4 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: 600;
+  font-weight: 500;
   color: rgb(95, 100, 105);
 }
 
 .short p {
-  font-size: 0.8em;
-  font-weight: 500;
-  color: rgb(235, 75, 45)
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: rgb(235, 75, 45);
 }
 
 .short iframe {
@@ -288,6 +288,31 @@ body {
 
 .icon p {
   font-size: 0.6em;
+}
+
+
+/* Modal */
+dialog::backdrop {
+  background-color: rgba(95, 100, 105, 0.5);
+}
+
+.modal {
+  padding: 0.3rem;
+  top: 25%;
+  margin: 0 auto;
+}
+
+/* Form */
+form {
+  display: flex;
+}
+
+form input {
+   font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  font-size: medium;
+  color: #333;
+  width: 250px;
+  border: none;
 }
 
 /* Responsive Breakpoint */
