@@ -1,0 +1,47 @@
+/* REUSABLE CLASS */
+
+/* FONTS */
+.font-oswald {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+}
+
+.font-ubuntu-sans {
+  font-family: "Ubuntu Sans", Arial, Helvetica, sans-serif;
+}
+
+.font-nunito-sans {
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+.font-roboto-flex {
+  font-family: "Roboto Flex", Arial, Helvetica, sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+}
+
+/* SIZE */
+.size-full {
+  width: 100%;
+}
+
+.size-48 {
+  width: 48px;
+  height: 48px;
+}
+
+.size-32 {
+  width: 32px;
+  height: 32px;
+}
+
+.size-28 {
+  width: 28px;
+  height: 28px;
+}
+

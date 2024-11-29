@@ -9,13 +9,14 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/component.css">
 
 </head>
 
 <body>
 
-  <dialog data-modal-kategori class="modal">
+  <dialog data-modal-kategori-top class="modal">
     <section class="brands">
       <div class="brand">
         <a href="">
@@ -104,42 +105,140 @@
     </section>
   </dialog>
 
-  <dialog data-modal-cari class="modal">
+  <dialog data-modal-cari-top class="modal">
     <form>
       <input type="text" placeholder="cari..."><br>
-      <div type="submit" class="icon"><i class="icon-size-32 close-modal-cari" data-feather="search"></i>
+      <div type="submit" class="icon"><i class="icon-size-32 close-modal-cari-down" data-feather="search"></i>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog data-modal-kategori-down class="modal">
+    <section class="brands">
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-aje-zas.jpg" alt="">
+          <p>Aje Zas</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-umama-scarf.jpg" alt="">
+          <p>Umama Scarf</p>
+        </a>
+      </div>
+      <div class="brand">
+        <a href="">
+          <img src="img/brand-malica.jpg" alt="">
+          <p>Malica</p>
+        </a>
+      </div>
+    </section>
+  </dialog>
+
+  <dialog data-modal-cari-down class="modal">
+    <form>
+      <input type="text" placeholder="cari..."><br>
+      <div type="submit" class="icon"><i class="icon-size-32 close-modal-cari-down" data-feather="search"></i>
       </div>
     </form>
   </dialog>
 
   <div class="container">
-    <nav class="menu">
+    <nav class="menu fixed-top">
       <div class="logo">
-        <h1><span class="h">Handayani</span><span class="s"> Store</span></h1>
+        <h1><span class="h font-pacifico">Handayani</span><span class="s"> Store</span></h1>
       </div>
       <div class="menu-list">
-        <div class="icon"><i class="icon-size-32" data-feather="grid"></i>
+        <div class="icon" open-modal-kategori-top><i class="size-32" data-feather="grid"></i>
           <p>Kategori</p>
         </div>
-        <div class="icon"><i class="icon-size-32" data-feather="image"></i>
-          <p>Galeri</p>
-        </div>
-        <div class="icon"><i class="icon-size-32" data-feather="youtube"></i>
-          <p>Short</p>
-        </div>
-        <div class="icon"><i class="icon-size-32" data-feather="search"></i>
+        <div class="icon" open-modal-cari-top><i class="size-32" data-feather="search"></i>
           <p>Cari</p>
         </div>
-        <div class="icon"><i class="icon-size-32" data-feather="message-circle"></i>
+        <div class="icon"><i class="size-32" data-feather="image"></i>
+          <p>Galeri</p>
+        </div>
+        <div class="icon"><i class="size-32" data-feather="youtube"></i>
+          <p>Short</p>
+        </div>
+        <div class="icon"><i class="size-32" data-feather="message-circle"></i>
           <p>WhatsApp</p>
         </div>
       </div>
     </nav>
 
+
     <header class="header">
       <div class="hero">
-        <h2 class="heading"><span class="h">Handayani</span><span class="s"> Store</h2>
-        <div class="p sub-heading">www.handayani-store.my.id</div>
+        <h2 class="heading"><span class="h font-pacifico">Handayani</span><span class="s"> Store</h2>
+        <div class="p sub-heading font-ubuntu-sans">www.handayani-store.my.id</div>
       </div>
       <div class="features feature-1">
         <h4 class="banner">Rp 15K</h4>
@@ -394,26 +493,31 @@
       </div>
     </section>
 
-    <nav class="desktop">
-      <div class="icon" open-modal-kategori><i class="icon-size-30" data-feather="grid"></i>
-        <p>Kategori</p>
-      </div>
-      <div class="icon"><i class="icon-size-30" data-feather="image"></i>
-        <p>Galeri</p>
-      </div>
-      <div class="icon"><i class="icon-size-30" data-feather="youtube"></i>
-        <p>Shorts</p>
-      </div>
-      <div class="icon" open-modal-cari><i class="icon-size-30" data-feather="search"></i>
-        <p>Cari</p>
-      </div>
-      <div class="icon"><i class="icon-size-30" data-feather="message-circle"></i>
-        <p>WhatsApp</p>
+    <nav class="desktop fixed-down">
+      <div class="menu-list">
+        <div class="icon" open-modal-kategori-down><i class="size-32" data-feather="grid"></i>
+          <p>Kategori</p>
+        </div>
+        <div class="icon" open-modal-cari-down><i class="size-32" data-feather="search"></i>
+          <p>Cari</p>
+        </div>
+        <div class="icon"><i class="size-32" data-feather="image"></i>
+          <p>Galeri</p>
+        </div>
+        <div class="icon"><i class="size-32" data-feather="youtube"></i>
+          <p>Short</p>
+        </div>
+        <div class="icon"><i class="size-32" data-feather="message-circle"></i>
+          <p>WhatsApp</p>
+        </div>
       </div>
     </nav>
+
+
   </div>
 
-  <script src="script.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
