@@ -13,7 +13,7 @@ body {
   background-color: #f5f5f5;
   font-size: 18px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
-  padding-top: 67px;
+  padding-top: 66px;
   padding-bottom: 0;
 }
 
@@ -150,9 +150,7 @@ body {
   border-radius: 0 0 5px 5px;
   background-color: #fff;
   text-align: center;
-  padding-bottom: 10px;
 }
-
 
 .good h4 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -164,8 +162,9 @@ body {
 .good p {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: 700;
+  font-weight: 600;
   color: rgb(235, 75, 45);
+  padding-bottom: 15px;
 }
 
 .good:hover {
@@ -174,16 +173,19 @@ body {
 }
 
 .link {
+  display: block;
+  border-radius: 0 0 5px 5px;
   background-color: rgb(223, 223, 223);
   color: #aaa;
   place-content: center;
+  text-align: center;
+  cursor: pointer;
 }
 
-
-.link img {
-  width: 100px;
+.link:hover {
+  border: 1px solid #aaa;
+  border-radius: 0 0 5px 5px;
 }
-
 
 .link h4 {
   font-size: 1em;
@@ -203,7 +205,6 @@ body {
   background-color: white;
   text-align: center;
   padding-top: 5px;
-  padding-bottom: 15px;
   border-radius: 0 0 5px 5px;
 }
 
@@ -217,8 +218,9 @@ body {
 .short p {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 0.7em;
-  font-weight: 700;
+  font-weight: 600;
   color: rgb(235, 75, 45);
+  padding-bottom: 15px;
 }
 
 .short iframe {
@@ -237,8 +239,8 @@ body {
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: 800;
-  padding-top: 25px;
-  padding-bottom: 10px;
+  padding-top: 50px;
+  padding-bottom: 15px;
 }
 
 
@@ -247,13 +249,12 @@ body {
   display: none;
 }
 
+
 /* Icon */
 .icon {
   text-align: center;
   color: #aaa;
 }
-
-
 
 .icon:hover {
   color: rgb(205, 1, 25);

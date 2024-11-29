@@ -1,20 +1,19 @@
 // Feather Icon
 feather.replace();
 
-
-// Modal-Cari-Top
-const modalCariTop = document.querySelector("[data-modal-cari-top]")
-const openModalCariTop = document.querySelector("[open-modal-cari-top]")
-openModalCariTop.addEventListener("click", () => { modalCariTop.showModal() })
-modalCariTop.addEventListener("click", e => {
-  const dialogDimensions = modalCariTop.getBoundingClientRect()
+// Modal-Generik
+const modal = document.querySelector("[data-modal]")
+const openModal = document.querySelector("[open-modal]")
+openModal.addEventListener("click", () => { modal.showModal() })
+modal.addEventListener("click", e => {
+  const dialogDimensions = modal.getBoundingClientRect()
   if (
     e.clientX < dialogDimensions.left ||
     e.clientX > dialogDimensions.right ||
     e.clientY < dialogDimensions.top ||
     e.clientY > dialogDimensions.bottom
   ) {
-    modalCariTop.close()
+    modal.close()
   }
 })
 
@@ -34,6 +33,40 @@ modalKategoriTop.addEventListener("click", e => {
   }
 })
 
+// Modal-Cari-Top
+const modalCariTop = document.querySelector("[data-modal-cari-top]")
+const openModalCariTop = document.querySelector("[open-modal-cari-top]")
+openModalCariTop.addEventListener("click", () => { modalCariTop.showModal() })
+modalCariTop.addEventListener("click", e => {
+  const dialogDimensions = modalCariTop.getBoundingClientRect()
+  if (
+    e.clientX < dialogDimensions.left ||
+    e.clientX > dialogDimensions.right ||
+    e.clientY < dialogDimensions.top ||
+    e.clientY > dialogDimensions.bottom
+  ) {
+    modalCariTop.close()
+  }
+})
+
+
+
+
+// Modal-Kategori-Down
+const modalKategoriDown = document.querySelector("[data-modal-kategori-down]")
+const openModalKategoriDown = document.querySelector("[open-modal-kategori-down]")
+openModalKategoriDown.addEventListener("click", () => { modalKategoriDown.showModal() })
+modalKategoriDown.addEventListener("click", e => {
+  const dialogDimensions = modalKategoriDown.getBoundingClientRect()
+  if (
+    e.clientX < dialogDimensions.left ||
+    e.clientX > dialogDimensions.right ||
+    e.clientY < dialogDimensions.top ||
+    e.clientY > dialogDimensions.bottom
+  ) {
+    modalKategoriDown.close()
+  }
+})
 
 // Modal-Cari-Down
 const modalCariDown = document.querySelector("[data-modal-cari-down]")
@@ -51,18 +84,22 @@ modalCariDown.addEventListener("click", e => {
   }
 })
 
-// Modal-Kategori-Down
-const modalKategoriDown = document.querySelector("[data-modal-kategori-down]")
-const openModalKategoriDown = document.querySelector("[open-modal-kategori-down]")
-openModalKategoriDown.addEventListener("click", () => { modalKategoriDown.showModal() })
-modalKategoriDown.addEventListener("click", e => {
-  const dialogDimensions = modalKategoriDown.getBoundingClientRect()
-  if (
-    e.clientX < dialogDimensions.left ||
-    e.clientX > dialogDimensions.right ||
-    e.clientY < dialogDimensions.top ||
-    e.clientY > dialogDimensions.bottom
-  ) {
-    modalKategoriDown.close()
-  }
-})
+const imgs = document.querySelectorAll('.img-select a');
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener('click', (event) => {
+        event.preventDefault();
+        imgId = imgItem.dataset.id;
+        slideImage();
+    });
+});
+
+function slideImage(){
+    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+}
+
+window.addEventListener('resize', slideImage);
