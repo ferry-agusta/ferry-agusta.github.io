@@ -11,7 +11,9 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/component.css">
-  <link rel="stylesheet" href="detail.css">
+  <!-- <link rel="stylesheet" href="detail.css"> -->
+  <link rel="stylesheet" href="css/overlay.css">
+
 
 </head>
 
@@ -211,80 +213,89 @@
     </form>
   </dialog>
 
-  <dialog data-modal class="modal">
-    <div class="card-wrapper">
-      <div class="card">
-        <!-- card left -->
-        <div class="product-imgs">
-          <div class="img-display">
-            <div class="img-showcase">
-              <img src="shoes_images/shoe_1.jpg" alt="shoe image">
-              <img src="shoes_images/shoe_2.jpg" alt="shoe image">
-              <img src="shoes_images/shoe_3.jpg" alt="shoe image">
-              <img src="shoes_images/shoe_4.jpg" alt="shoe image">
-            </div>
+
+  <div id="myNav" class="overlay ">
+    <div class="overlay-content">
+      <i class="back size-32" data-feather="x-circle" onclick="closeNav()"></i>
+      <section class="details">
+        <div class="container-detail">
+          <div class="mySlides">
+            <div class="numbertext">1 / 9</div>
+            <img src="img/1.webp">
           </div>
-          <div class="img-select">
-            <div class="img-item">
-              <a href="#" data-id="1">
-                <img src="shoes_images/shoe_1.jpg" alt="shoe image">
-              </a>
+          <div class="mySlides">
+            <div class="numbertext">2 / 9</div>
+            <img src="img/2.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 9</div>
+            <img src="img/3.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 9</div>
+            <img src="img/4.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 9</div>
+            <img src="img/5.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 9</div>
+            <img src="img/6.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">7 / 9</div>
+            <img src="img/7.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">8 / 9</div>
+            <img src="img/8.webp">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">9 / 9</div>
+            <img src="img/9.webp">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <!-- <div class="caption-container">
+            <p id="caption"></p>
+          </div> -->
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="img/1.webp" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
             </div>
-            <div class="img-item">
-              <a href="#" data-id="2">
-                <img src="shoes_images/shoe_2.jpg" alt="shoe image">
-              </a>
+            <div class="column">
+              <img class="demo cursor" src="img/2.webp" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
             </div>
-            <div class="img-item">
-              <a href="#" data-id="3">
-                <img src="shoes_images/shoe_3.jpg" alt="shoe image">
-              </a>
+            <div class="column">
+              <img class="demo cursor" src="img/3.webp" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
             </div>
-            <div class="img-item">
-              <a href="#" data-id="4">
-                <img src="shoes_images/shoe_4.jpg" alt="shoe image">
-              </a>
+            <div class="column">
+              <img class="demo cursor" src="img/4.webp" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/5.webp" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/6.webp" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/7.webp" style="width:100%" onclick="currentSlide(7)" alt="Northern Lights">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/8.webp" style="width:100%" onclick="currentSlide(8)" alt="Nature and sunrise">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/9.webp" style="width:100%" onclick="currentSlide(9)" alt="Snowy Mountains">
             </div>
           </div>
         </div>
-        <!-- card right -->
-        <div class="product-content">
-          <h2 class="product-title">nike shoes</h2>
-          <a href="#" class="product-link">visit nike store</a>
-   
-          <div class="product-price">
-            <p class="last-price">Old Price: <span>$257.00</span></p>
-            <p class="new-price">New Price: <span>$249.00 (5%)</span></p>
-          </div>
-
-          <div class="product-detail">
-            <h2>about this item: </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat
-              sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos,
-              labore suscipit. Unde.</p>
-            <ul>
-              <li>Color: <span>Black</span></li>
-              <li>Available: <span>in stock</span></li>
-              <li>Category: <span>Shoes</span></li>
-              <li>Shipping Area: <span>All over the world</span></li>
-              <li>Shipping Fee: <span>Free</span></li>
-            </ul>
-          </div>
-
-          <div class="purchase-info">
-            <input type="number" min="0" value="1">
-            <button type="button" class="btn">
-              Add to Cart <i class="fas fa-shopping-cart"></i>
-            </button>
-            <button type="button" class="btn">Compare</button>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
-  </dialog>
-
-
+  </div>
 
   <div class="container">
     <nav class="menu fixed-top">
@@ -415,117 +426,85 @@
 
     <div class="title-section"># Rekomendasi</div>
     <section class="goods">
-      <div class="good" open-modal>
-        <!-- <a href=""> -->
+      <div class="good" onclick="openNav()">
         <img src="img/1.webp" alt="">
         <h4>ADVAN Workplus</h4>
         <p>Rp 150.000</p>
-        <!-- </a> -->
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/2.webp" alt="">
-          <h4>Gamis melayu</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/2.webp" alt="">
+        <h4>Gamis melayu</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/3.webp" alt="">
-          <h4>Gamis bekasi</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/3.webp" alt="">
+        <h4>Gamis bekasi</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/4.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/4.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/5.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/5.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/6.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/6.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/7.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/7.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/8.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/8.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/9.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/9.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/10.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/10.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/11.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/11.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/12.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/12.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/13.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/13.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/14.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/14.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
-      <div class="good">
-        <a href="">
-          <img src="img/15.webp" alt="">
-          <h4>Gamis mesir</h4>
-          <p>Rp 150.000</p>
-        </a>
+      <div class="good" onclick="openNav()">
+        <img src="img/15.webp" alt="">
+        <h4>Gamis mesir</h4>
+        <p>Rp 150.000</p>
       </div>
       <div class="link">
-        <a href="">
-          <div class="icon"><i class="size-48" data-feather="image"></i>
-          </div>
-          <h4>Lihat Galeri</h4>
-        </a>
+        <div class="icon"><i class="size-48" data-feather="image"></i>
+        </div>
+        <h4>Lihat Galeri</h4>
       </div>
     </section>
 

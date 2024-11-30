@@ -1,21 +1,6 @@
 // Feather Icon
 feather.replace();
 
-// Modal-Generik
-const modal = document.querySelector("[data-modal]")
-const openModal = document.querySelector("[open-modal]")
-openModal.addEventListener("click", () => { modal.showModal() })
-modal.addEventListener("click", e => {
-  const dialogDimensions = modal.getBoundingClientRect()
-  if (
-    e.clientX < dialogDimensions.left ||
-    e.clientX > dialogDimensions.right ||
-    e.clientY < dialogDimensions.top ||
-    e.clientY > dialogDimensions.bottom
-  ) {
-    modal.close()
-  }
-})
 
 // Modal-Kategori-Top
 const modalKategoriTop = document.querySelector("[data-modal-kategori-top]")
@@ -50,8 +35,6 @@ modalCariTop.addEventListener("click", e => {
 })
 
 
-
-
 // Modal-Kategori-Down
 const modalKategoriDown = document.querySelector("[data-modal-kategori-down]")
 const openModalKategoriDown = document.querySelector("[open-modal-kategori-down]")
@@ -84,22 +67,43 @@ modalCariDown.addEventListener("click", e => {
   }
 })
 
-const imgs = document.querySelectorAll('.img-select a');
-const imgBtns = [...imgs];
-let imgId = 1;
 
-imgBtns.forEach((imgItem) => {
-    imgItem.addEventListener('click', (event) => {
-        event.preventDefault();
-        imgId = imgItem.dataset.id;
-        slideImage();
-    });
-});
-
-function slideImage(){
-    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
-
-    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+// POPUP
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
 }
 
-window.addEventListener('resize', slideImage);
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+
+
+// OVERLAY
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
