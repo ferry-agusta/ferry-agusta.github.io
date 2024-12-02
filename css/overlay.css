@@ -17,24 +17,28 @@
   right: 5px;
   color: white;
   cursor: pointer;
-  transition: 0.1s;
+  /* transition: 0.1s; */
 }
 
-.overlay-content .back:hover,
-.overlay-content .back:focus {
+.overlay .close:hover,
+.overlay .close:focus {
   color: rgb(205, 1, 25);
 }
 
 .overlay-content {
-  padding: 45px 20px;
+  display: grid;
+  grid-template-areas: 'details product-content';
+  grid-template-columns: 1fr 2fr;
+  padding: 45px 20px 20px 20px;
 }
 
 /* CONTENT */
 /* DETAILS */
 .details {
+  grid-area: details;
   background-color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .mySlides img {
@@ -109,7 +113,7 @@
 .row {
   margin-top: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
   list-style: none;
   gap: 3px;
 }
@@ -124,4 +128,47 @@
 .demo:hover {
   opacity: 1;
   border: 1px solid #aaa;
+}
+
+
+/* DATA PRODUK */
+.product-content {
+  grid-area: product-content;
+  background-color: white;
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  .overlay-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    padding: 45px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+
+  #overlay-produk {
+    overflow: auto;
+  }
+
+  .details {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .product-content {
+    border-radius: 0 0 10px 10px;
+  }
+
+
+  .overlay-content {
+    grid-template-areas:
+      'details'
+      'product-content';
+    grid-template-columns: 1fr;
+  }
+
 }
