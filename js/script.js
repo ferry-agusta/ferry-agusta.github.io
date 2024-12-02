@@ -68,16 +68,6 @@ modalCariDown.addEventListener("click", e => {
 })
 
 
-// POPUP
-function openNav() {
-  document.getElementById("myNav").style.display = "block";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.display = "none";
-}
-
-
 // OVERLAY
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -105,5 +95,34 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+  // captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+
+
+
+// OVERLAY PRODUK
+const el_Overlay_Produk = document.querySelector("#overlay-produk")
+el_Overlay_Produk.addEventListener('click', function (e) {
+  if (e.target.classList.contains('close')) {
+    e.target.parentNode.style.display = 'none'
+  }
+  if (e.target.classList.contains('prev')) {
+    plusSlides(-1)
+  }
+  if (e.target.classList.contains('next')) {
+    plusSlides(1)
+  }
+})
+
+// PRODUK DETAIL
+const el_Produk = document.querySelectorAll("#produk > .good")
+el_Produk.forEach(function (el, index, arr) {
+  el.addEventListener("click", () => {
+    openOverlayProduk()
+  })
+})
+
+function openOverlayProduk() {
+  document.getElementById("overlay-produk").style.display = "block";
 }

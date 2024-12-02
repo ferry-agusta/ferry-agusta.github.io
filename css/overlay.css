@@ -1,5 +1,5 @@
 /* OVERLAY */
-.overlay {
+#overlay-produk {
   display: none;
   position: fixed;
   top: 0;
@@ -10,12 +10,8 @@
   z-index: 1;
 }
 
-.overlay-content {
-  padding: 45px 20px;
-}
 
-/* CLOSE */
-.back {
+.overlay .close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -27,6 +23,10 @@
 .overlay-content .back:hover,
 .overlay-content .back:focus {
   color: rgb(205, 1, 25);
+}
+
+.overlay-content {
+  padding: 45px 20px;
 }
 
 /* CONTENT */
