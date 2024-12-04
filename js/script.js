@@ -102,11 +102,17 @@ function showSlides(n) {
 
 
 // OVERLAY PRODUK
+const el_Produk = document.querySelectorAll("#produk > .good")
 const el_Overlay_Produk = document.querySelector("#overlay-produk")
+const el_Overlay_Close = document.querySelector("#overlay-produk > .close")
+
+el_Produk.forEach(function (el) {
+  el.addEventListener("click", openOverlayProduk)
+})
+
+el_Overlay_Close.addEventListener('click', closeOverlayProduk);
+
 el_Overlay_Produk.addEventListener('click', function (e) {
-  if (e.target.classList.contains('close')) {
-    e.target.parentNode.style.display = 'none'
-  }
   if (e.target.classList.contains('prev')) {
     plusSlides(-1)
   }
@@ -115,14 +121,9 @@ el_Overlay_Produk.addEventListener('click', function (e) {
   }
 })
 
-// PRODUK DETAIL
-const el_Produk = document.querySelectorAll("#produk > .good")
-el_Produk.forEach(function (el, index, arr) {
-  el.addEventListener("click", () => {
-    openOverlayProduk()
-  })
-})
-
 function openOverlayProduk() {
   document.getElementById("overlay-produk").style.display = "block";
+}
+function closeOverlayProduk() {
+  document.getElementById("overlay-produk").style.display = "none";
 }
