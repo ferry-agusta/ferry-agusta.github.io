@@ -2,25 +2,30 @@
 feather.replace();
 
 // Swiper JS
-var swiper = new Swiper(".mySwiper", {
+
+var heroSwiper = new Swiper(".swiper1", {
+  spaceBetween: 30,
+  effect: "fade",
+  pagination: {
+    el: ".swiper-pagination1",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  }
+});
+
+var brandSwiper = new Swiper(".swiper2", {
   slidesPerView: 7,
   spaceBetween: 4,
   centeredSlides: false,
   autoplay: {
-    delay: 1500,
+    delay: 1200,
     disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   }
-
-
 });
+
 
 // Modal-Kategori-Top
 const modalKategoriTop = document.querySelector("[data-modal-kategori-top]")
@@ -122,13 +127,8 @@ function showSlides(n) {
 
 
 // OVERLAY PRODUK
-const el_Produk = document.querySelectorAll("#produk > .good")
 const el_Overlay_Produk = document.querySelector("#overlay-produk")
 const el_Overlay_Close = document.querySelector("#overlay-produk > .close")
-
-el_Produk.forEach(function (el) {
-  el.addEventListener("click", openOverlayProduk)
-})
 
 el_Overlay_Close.addEventListener('click', closeOverlayProduk);
 
@@ -147,3 +147,12 @@ function openOverlayProduk() {
 function closeOverlayProduk() {
   document.getElementById("overlay-produk").style.display = "none";
 }
+
+
+// DETAIL PRODUK REKOMENDASI
+const el_Produk_Rekomendasi = document.querySelectorAll("#rekomendasi > .good")
+
+el_Produk_Rekomendasi.forEach(function (el) {
+  el.addEventListener("click", openOverlayProduk)
+})
+
