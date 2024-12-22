@@ -1,6 +1,26 @@
 // Feather Icon
 feather.replace();
 
+// Swiper JS
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 7,
+  spaceBetween: 4,
+  centeredSlides: false,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
+
+
+});
 
 // Modal-Kategori-Top
 const modalKategoriTop = document.querySelector("[data-modal-kategori-top]")

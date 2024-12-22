@@ -33,12 +33,10 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
-
 .menu .logo {
   font-size: 1.2em;
   font-weight: 400;
 }
-
 
 .logo .h {
   color: rgb(205, 1, 25);
@@ -53,7 +51,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   list-style: none;
 }
-
 
 
 /* Header */
@@ -116,18 +113,16 @@ body {
 .brands {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 20px;
 }
 
 .brand {
   background-color: white;
   padding: 3px;
   text-align: center;
-
 }
 
 .brand p {
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .brand a {
@@ -374,6 +369,11 @@ form input {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
   }
 
+  /* Brand */
+  .brand p {
+    font-size: 0.5em;
+  }
+
 }
 
 
@@ -386,4 +386,6 @@ form input {
       'feature-1'
       'feature-2';
   }
+
+
 }
