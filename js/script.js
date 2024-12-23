@@ -2,23 +2,24 @@
 feather.replace();
 
 // Swiper JS
-
 var heroSwiper = new Swiper(".swiper1", {
-  spaceBetween: 30,
-  effect: "fade",
+  slidesPerView: 2,
+  centeredSlides: false,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination1",
     clickable: true,
   },
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  }
 });
 
 var brandSwiper = new Swiper(".swiper2", {
   slidesPerView: 7,
   spaceBetween: 4,
+  loop: true,
   centeredSlides: false,
   autoplay: {
     delay: 1200,
