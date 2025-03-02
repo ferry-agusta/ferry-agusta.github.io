@@ -84,6 +84,7 @@ body {
   display: grid;
   place-content: center;
   text-align: center;
+  padding: 0px 40px;
 }
 
 .feature-1 {

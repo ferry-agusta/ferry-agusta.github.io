@@ -4,10 +4,10 @@
   margin: auto;
 }
 
-.swiper-slide {
+/* .swiper-slide {
   background-size: cover;
   background-position: center;
-}
+} */
 
 .swiper-slide img {
   display: block;
@@ -15,12 +15,7 @@
 }
 
 .mySwiperThumbs {
-  margin: auto;
-}
-
-.mySwiperThumbs {
   box-sizing: border-box;
-  padding: 1px 0;
 }
 
 .mySwiperThumbs .swiper-slide {
@@ -29,6 +24,7 @@
 
 .mySwiperThumbs .swiper-slide-thumb-active {
   opacity: 1;
+  border: 1px solid #aaa;
 }
 
 /* OVERLAY */

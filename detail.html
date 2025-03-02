@@ -214,63 +214,63 @@
 
   <script>
 
-    // Feather Icon
-    feather.replace();
+    // // Feather Icon
+    // feather.replace();
 
 
-    // SWIPERJS
-    var swiperThumbs = new Swiper(".mySwiperThumbs", {
-      spaceBetween: 2,
-      slidesPerView: 8,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mySwiperGalery", {
-      spaceBetween: 0,
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination-galery",
-        clickable: true,
-      },
-      thumbs: {
-        swiper: swiperThumbs,
-      },
-    });
+    // // SWIPERJS
+    // var swiperThumbs = new Swiper(".mySwiperThumbs", {
+    //   spaceBetween: 2,
+    //   slidesPerView: 8,
+    //   freeMode: true,
+    //   watchSlidesProgress: true,
+    // });
+    // var swiper2 = new Swiper(".mySwiperGalery", {
+    //   spaceBetween: 0,
+    //   slidesPerView: 1,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   pagination: {
+    //     el: ".swiper-pagination-galery",
+    //     clickable: true,
+    //   },
+    //   thumbs: {
+    //     swiper: swiperThumbs,
+    //   },
+    // });
 
 
-    // OVERLAY PRODUK
-    const el_Overlay_Produk = document.querySelector("#overlay-produk")
-    const el_Overlay_Close = document.querySelector("#overlay-produk > .close")
+    // // OVERLAY PRODUK
+    // const el_Overlay_Produk = document.querySelector("#overlay-produk")
+    // const el_Overlay_Close = document.querySelector("#overlay-produk > .close")
 
-    el_Overlay_Close.addEventListener('click', closeOverlayProduk);
+    // el_Overlay_Close.addEventListener('click', closeOverlayProduk);
 
-    el_Overlay_Produk.addEventListener('click', function (e) {
-      if (e.target.classList.contains('prev')) {
-        plusSlides(-1)
-      }
-      if (e.target.classList.contains('next')) {
-        plusSlides(1)
-      }
-    })
+    // el_Overlay_Produk.addEventListener('click', function (e) {
+    //   if (e.target.classList.contains('prev')) {
+    //     plusSlides(-1)
+    //   }
+    //   if (e.target.classList.contains('next')) {
+    //     plusSlides(1)
+    //   }
+    // })
 
-    function openOverlayProduk() {
-      document.getElementById("overlay-produk").style.display = "block";
-    }
-    function closeOverlayProduk() {
-      document.getElementById("overlay-produk").style.display = "none";
-    }
+    // function openOverlayProduk() {
+    //   document.getElementById("overlay-produk").style.display = "block";
+    // }
+    // function closeOverlayProduk() {
+    //   document.getElementById("overlay-produk").style.display = "none";
+    // }
 
 
-    // DETAIL PRODUK REKOMENDASI
-    const el_Produk_Rekomendasi = document.querySelectorAll("#rekomendasi > .good")
+    // // DETAIL PRODUK REKOMENDASI
+    // const el_Produk_Rekomendasi = document.querySelectorAll("#rekomendasi > .good")
 
-    el_Produk_Rekomendasi.forEach(function (el) {
-      el.addEventListener("click", openOverlayProduk)
-    })
+    // el_Produk_Rekomendasi.forEach(function (el) {
+    //   el.addEventListener("click", openOverlayProduk)
+    // })
   </script>
 
 </body>
